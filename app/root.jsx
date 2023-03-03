@@ -10,21 +10,20 @@ import {
 import { storyblokInit, apiPlugin } from "@storyblok/react";
 import Feature from "./components/Feature";
 import Grid from "./components/Grid";
-import Link from "./components/Link";
 import Page from "./components/Page";
 import Teaser from "./components/Teaser";
 
 const components = {
   feature: Feature,
   grid: Grid,
-  link: Link,
   page: Page,
   teaser: Teaser,
 };
 
 storyblokInit({
-  accessToken: "UXVyS7kr6TKvbuAGuXUVCgtt",
+  accessToken: "zkAcjZqCcGNr364fllvhwwtt", // replace with your access token
   use: [apiPlugin],
+  // apiOptions: { region: 'us' }, // if your space is located in the US
   components,
 });
 

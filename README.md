@@ -1,4 +1,4 @@
-# Remix Smashing Workshop
+# Remix Smashing Workshop - Start Point
 
 ## Setup
 

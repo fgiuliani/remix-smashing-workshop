@@ -8,17 +8,16 @@ import {
   StoryblokComponent,
 } from "@storyblok/react";
 
-export const loader = async ({ params }) => {
-  let slug = params["*"] ?? "home";
-  slug = slug.endsWith("/") ? slug.slice(0, -1) : slug;
+export const loader = async () => {
+  // the slug of the story
+  let slug = "home";
 
-  let sbParams = {
-    version: "draft",
-    resolve_links: "url", // or 'published'
+  let params = {
+    version: "draft", // or 'published'
   };
 
   const storyblokApi = getStoryblokApi();
-  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, params);
 
   return json(data?.story);
 };
